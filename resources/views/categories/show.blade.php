@@ -1,33 +1,44 @@
-<!-- selon moi nous avons fait un appel de sb-admin/app dans la page dashboard -->
+
 @extends('sb-admin/app')
 
-<!-- fin selon moi nous avons fait un appel de sb-admin/app dans la page dashboard -->
-
 @section('content')
+<div class="content-wrapper" style="min-height: 436px;">
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-12">
+            <h1 class="text-center">Voir Categorie</h1>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>  {{ $categorie->nom_categorie }}</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('categories.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
-            </div>
-        </div>
-    </div>
+    <section class="content ">
+        <div class="container">+
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title center">Information</h3>
+                        </div>
+                
+                        <div class="card-body">
+                        
+                        <div class="form-group">
+                            NOM : {{ $categorie->nom_categorie }}
+                        </div>
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Nom categorie:</strong>
-                {{ $categorie->nom_categorie }}
+
+                        <div class="form-group">
+                            CATEGORIE : {!! $categorie->description_categorie !!}
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Description Categorie:</strong>
-                {{ $categorie->description_categorie }}
-            </div>
-        </div>
-    </div>
-    @endsection
+    </section>
+</div>
+@endsection

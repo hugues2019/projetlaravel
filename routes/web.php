@@ -33,6 +33,7 @@ Route::resource('categories','App\Http\Controllers\CategorieController');
 
 
 
+
 //  Route::get('/add-category-produits', [dashboardController::class, 'add-category-produits']);
 // -------au niveau des ajout dans le dashboard j'ai pas cree ceux la leur controleur
 // Route::get('/add-categ', function () {
